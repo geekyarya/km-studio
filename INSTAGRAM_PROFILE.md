@@ -12,8 +12,8 @@ The name field is searchable, so "Mumbai" helps people find her.
 
 ## Bio (150 characters max)
 ```
-Jaipur heart, Mumbai nights 🌙
-saree > everything 🥻 | chai addict ☕
+Mumbai baddie 🖤 | 24
+fits, nights & bad decisions ✨
 digital creator 🤖 #AIgenerated
 👇 milte hain, jaan 💋
 ```

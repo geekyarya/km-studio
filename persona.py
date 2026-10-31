@@ -22,11 +22,12 @@ FACE_PROMPT = (
 QUALITY = "shot on 85mm, realistic skin texture, trendy instagram influencer photo, high detail"
 
 NEGATIVE = (
-    "bindi, nose ring, nose pin, mangalsutra, sindoor, "
+    "saree, lehenga, salwar, kurta, dupatta, ethnic wear, traditional indian clothing, "
+    "traditional jewelry, bindi, nose ring, nose pin, mangalsutra, sindoor, mehndi, bangles, "
     "nude, naked, nipples, topless, see-through, cartoon, anime, 3d render, plastic skin, "
     "deformed hands, extra fingers, blurry, watermark, text, logo, lowres, bad anatomy, "
     "child, teen, young girl, old woman, wrinkles"
 )
 
-# Face selection only: also keep traditional clothing/jewellery out of the reference face.
-FACE_NEGATIVE = "traditional jewelry, saree, dupatta, " + NEGATIVE
+
+FACE_NEGATIVE = NEGATIVE
