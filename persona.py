@@ -4,21 +4,21 @@ so prompts only need to describe body, styling and scene."""
 NAME = "Kiara Mehra"
 
 LOOK = (
-    "photo of an extremely beautiful 24 year old North Indian Punjabi woman, Indian facial features, fair glowing skin, "
+    "photo of an extremely beautiful 24 year old North Indian Punjabi woman, Indian facial features, very fair bright luminous skin, "
     "dark brown almond eyes, perfect face, long thick jet black hair, "
-    "glossy lips, snatched makeup, curvy hourglass figure, modern gen z baddie aesthetic, alluring"
+    "glossy lips, soft glam makeup, cute and beautiful, curvy hourglass figure, modern gen z aesthetic"
 )
 
 # Used only for choosing her face (Step 1 of the Colab notebook).
 FACE_PROMPT = (
-    "close-up beauty portrait of an extremely beautiful 24 year old North Indian Punjabi woman from Delhi, "
-    "distinctly Indian facial features, fair glowing skin with a natural warm undertone, perfect face card, "
-    "symmetrical face, big expressive dark brown almond-shaped eyes with long lashes, sharp winged kohl eyeliner, "
-    "high cheekbones, sharp jawline, defined nose, full glossy nude-pink lips slightly parted, thick dark brows, "
-    "long thick silky jet black hair with soft curtain bangs, sultry seductive gaze into the camera, confident smirk, "
-    "thin silver chain necklace, black off-shoulder corset top, bare shoulders, "
-    "soft glamour lighting, modern gen z Indian it-girl, Bollywood-style beauty, vogue india cover, "
-    "ultra realistic skin texture, sharp focus, 85mm"
+    "close-up beauty portrait of a very cute and beautiful 24 year old Indian woman from Delhi, "
+    "distinctly Indian facial features, very fair bright luminous glowing skin, flawless complexion, "
+    "pretty symmetrical face, big sparkling dark brown eyes with long lashes, soft winged kajal, "
+    "cute button nose, soft rosy cheeks, full glossy pink lips, sweet charming smile with a hint of flirt, "
+    "thick dark brows, long thick silky jet black hair with soft curtain bangs, "
+    "small silver hoop earrings, thin silver chain, black off-shoulder top, "
+    "bright soft beauty lighting, clean light background, modern gen z Indian it-girl, "
+    "Bollywood heroine beauty, ultra realistic skin texture, sharp focus, 85mm"
 )
 
 QUALITY = "shot on 85mm, realistic skin texture, trendy instagram influencer photo, high detail"
