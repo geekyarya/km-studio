@@ -3,7 +3,11 @@ name: Kiara autopost
 on:
   schedule:
     - cron: "35 * * * *"   # every hour at :05 IST - posts whatever slot is due
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      post_now:
+        description: "Publish this many of today's next items immediately (ignores time slots)"
+        default: "0"
 
 permissions:
   contents: write
@@ -27,6 +31,7 @@ jobs:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           DRY_RUN: ${{ vars.DRY_RUN }}
+          POST_NOW: ${{ github.event.inputs.post_now || '0' }}
       - name: Save state
         if: always()
         run: |

@@ -44,11 +44,12 @@ def main() -> int:
     OUT.mkdir(exist_ok=True)
     errors = 0
 
-    max_per_run = int(os.getenv("MAX_PER_RUN", "2"))  # never dump a backlog all at once
+    post_now = int(os.getenv("POST_NOW", "0") or 0)  # manual "post now" from the Actions tab
+    max_per_run = post_now or int(os.getenv("MAX_PER_RUN", "2"))  # never dump a backlog all at once
     published = 0
     for item in plan["items"]:
         key = item["id"]
-        if key in done or item["slot"] > now_hm:
+        if key in done or (item["slot"] > now_hm and not post_now):
             continue
         if published >= max_per_run:
             print(f"{key}: waiting for next run (max {max_per_run} per hour)")
