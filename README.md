@@ -21,12 +21,11 @@ Raise the numbers in `ramp` if you want more. Up to 6 Reels and 4 posts a day fi
 ## Setup (once)
 1. **GitHub:** create a **public** repo with a neutral name (for example `km-studio`) and push this folder. Photos must be publicly reachable for Instagram to fetch them, and public repos get unlimited Actions minutes.
 2. **GitHub token for Colab:** Settings → Developer settings → Fine-grained tokens → this repo only → *Contents: Read and write*.
-3. **Instagram API token (free, no Facebook Page needed):**
-   1. Go to developers.facebook.com, log in, then **My Apps → Create app**. Choose "Other", then type **Business**, and name it `KM Studio`.
-   2. Add the product **Instagram → API setup with Instagram login**.
-   3. Under "Generate access tokens", click **Add account**, log in as Kiara and allow it. Then click **Generate token** and copy it. It lasts 60 days, and you press the same button to renew it.
-   4. Get `IG_USER_ID`: open `https://graph.instagram.com/v21.0/me?fields=user_id,username&access_token=YOUR_TOKEN` and copy `user_id`.
-   5. While the app is in development mode, Kiara's account must be added as an Instagram tester under **App roles → Roles**, and the invite accepted in Instagram under Settings → Website permissions → Apps and websites → Tester invites.
+3. **Instagram API token (free, never expires):** in Kiara's own business portfolio ("Kiara Mehra Studio"), with Meta app "KM Studio":
+   1. Business settings → Accounts → Instagram accounts → connect Kiara's Instagram.
+   2. Users → System users → add `km-autopost` (Employee). Assign assets: the KM Studio app plus Kiara's Instagram account.
+   3. Generate token → app KM Studio → expiration **Never** → permissions `instagram_basic` and `instagram_content_publish` only.
+   4. `IG_USER_ID` = Kiara's Instagram account ID (shown in Business settings → Instagram accounts).
 4. **Repo settings → Secrets → Actions:** `IG_USER_ID`, `IG_ACCESS_TOKEN`.
 5. **Repo settings → Variables:** `DRY_RUN=true` for the first test, then delete it.
 6. **Music (optional but recommended):** put royalty-free `.mp3` files from the YouTube Audio Library or Pixabay Music in `music/`. Reels pick one at random.

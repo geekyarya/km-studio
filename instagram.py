@@ -1,7 +1,9 @@
-"""Instagram API with Instagram Login (free, no Facebook Page needed).
+"""Instagram content publishing (free).
+Default: Facebook Graph API with a business-portfolio System User token
+(instagram_basic + instagram_content_publish). Set IG_API_HOST=graph.instagram.com
+to use an Instagram-Login token instead.
 Reels are uploaded directly from the file; photos are fetched by Instagram from their
-public GitHub raw URL. Needs a Creator/Business Instagram account and a token with
-instagram_business_basic + instagram_business_content_publish."""
+public GitHub raw URL."""
 import os
 import pathlib
 import time
@@ -9,7 +11,7 @@ import time
 import requests
 
 VERSION = "v21.0"
-GRAPH = f"https://graph.instagram.com/{VERSION}"
+GRAPH = f"https://{os.getenv('IG_API_HOST', 'graph.facebook.com')}/{VERSION}"
 
 
 def _creds():
