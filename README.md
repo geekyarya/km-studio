@@ -1,14 +1,37 @@
-# Kiara Autopilot
+# Kiara Autopilot (100% free)
 
-Every day: Claude picks Kiara's post (pillar rotation, festivals, no repeats) → Flux makes the image with her face LoRA → Kling animates it → it posts to Instagram, or waits for your review.
+| Job | Free tool |
+|---|---|
+| Content planning (outfits, locations, hooks, Hinglish captions, hashtags, festivals) | `make_plans.py`, offline content bank, no AI API |
+| Images of Kiara with a consistent face | Google Colab free T4 GPU, RealVisXL + IP-Adapter face (`notebooks/weekly_studio.ipynb`) |
+| Reels (zoom + crossfade + hook text + music) | ffmpeg on GitHub Actions |
+| Posting Reels and photos | Instagram Graph API |
+| Scheduler | GitHub Actions, hourly (unlimited free minutes on a **public** repo) |
 
-## One-time setup
-1. **Train her face:** generate ~30 images with `persona.LOOK`, keep the 20 most consistent, train a Flux LoRA on fal.ai (`fal-ai/flux-lora-fast-training`). Its URL goes in `KIARA_LORA_URL`.
-2. **Instagram:** create Kiara's account → switch to a Creator/Business account → link a Facebook Page → create a Meta developer app → get `IG_USER_ID` and a long-lived `IG_ACCESS_TOKEN`. Turn on the "AI info" label in the account settings.
-3. **Keys:** `ANTHROPIC_API_KEY` (console.anthropic.com), `FAL_KEY` (fal.ai).
-4. Push this folder to a private GitHub repo and add the five values above under **Settings → Secrets → Actions**.
+## Daily volume (ramps up to protect the new account)
+Set in `config.json`:
+- Week 1: 1 Reel + 1 post a day
+- Week 2: 2 + 1
+- Week 3: 3 + 2
+- Week 4: 4 + 3
+- Day 30 onwards: 5 Reels + 3 posts a day
 
-## Running
-- Automatic: GitHub Actions runs daily at 5:47 PM IST. Download the result from the run's artifacts.
-- Start in **review mode** (default). Once the posts look right, add a repository *variable* `AUTO_POST=true` for fully hands-off posting.
-- Local test: `python run_daily.py --plan-only` (only needs `ANTHROPIC_API_KEY`).
+Raise the numbers in `ramp` if you want more. Up to 6 Reels and 4 posts a day fit the time slots.
+
+## Setup (once)
+1. **GitHub:** create a **public** repo with a neutral name (for example `km-studio`) and push this folder. Photos must be publicly reachable for Instagram to fetch them, and public repos get unlimited Actions minutes.
+2. **GitHub token for Colab:** Settings → Developer settings → Fine-grained tokens → this repo only → *Contents: Read and write*.
+3. **Instagram API token (free):** Kiara's Instagram must be a Creator account linked to a Facebook Page. At developers.facebook.com, create an app (type Business) and add *Instagram Graph API*. In Graph API Explorer, generate a token with `instagram_basic`, `instagram_content_publish` and `pages_show_list`, then exchange it for a **long-lived token** (60 days; refresh it before it expires). Get `IG_USER_ID` from `GET /me/accounts?fields=instagram_business_account`.
+4. **Repo settings → Secrets → Actions:** `IG_USER_ID`, `IG_ACCESS_TOKEN`.
+5. **Repo settings → Variables:** `DRY_RUN=true` for the first test, then delete it.
+6. **Music (optional but recommended):** put royalty-free `.mp3` files from the YouTube Audio Library or Pixabay Music in `music/`. Reels pick one at random.
+7. Set `start_date` in `config.json` to your launch day.
+
+## Weekly routine (about 30–60 minutes, mostly waiting)
+Open `notebooks/weekly_studio.ipynb` in Colab → T4 GPU → Run all. It plans the next 8 days, generates every image and pushes them. The first time, it also asks you to pick Kiara's face.
+
+## Tweaks
+- Edit any day: change `plans/YYYY-MM-DD.json` (captions, outfits, slots) before the time comes.
+- Add new outfits, locations, hooks or captions to `content_bank.py`. More lines give more variety.
+- Add festival dates to `MOVABLE_FESTIVALS` each year.
+- Test locally: `DRY_RUN=true python run_daily.py`

@@ -1,57 +1,82 @@
-"""Daily pipeline: plan -> image -> video -> (post or queue for review).
+"""Runs every hour on GitHub Actions. Publishes every item whose time slot has passed today
+and whose images exist. State is kept in state/posted.json (committed back to the repo).
 
-AUTO_POST=true  -> publishes to Instagram automatically
-AUTO_POST unset -> saves everything to output/<date>/ for you to review and post
+DRY_RUN=true (or no Instagram secrets) -> builds the media but does not post.
 """
-import datetime
+import datetime as dt
 import json
 import os
 import pathlib
 import sys
 
-import requests
-
-import generator
-import planner
+import reel_maker
+from make_plans import CONFIG, today_ist
 
 ROOT = pathlib.Path(__file__).parent
-HISTORY = ROOT / "history.json"
+STATE = ROOT / "state" / "posted.json"
+OUT = ROOT / "output"
 
 
-def main(plan_only: bool = False) -> None:
-    history = json.loads(HISTORY.read_text()) if HISTORY.exists() else []
-    today = datetime.date.today().isoformat()
-    out = ROOT / "output" / today
-    out.mkdir(parents=True, exist_ok=True)
+def now_ist() -> dt.datetime:
+    return dt.datetime.now(dt.timezone.utc) + dt.timedelta(minutes=CONFIG["timezone_offset_minutes"])
 
-    print("Planning today's post...")
-    plan = planner.plan_today(history)
-    caption = f"{plan['caption']}\n\n{' '.join(plan['hashtags'])}"
-    print(json.dumps(plan, indent=2, ensure_ascii=False))
 
-    record = {"date": today, "pillar": plan["pillar"], "title": plan["title"], "plan": plan}
+def raw_url(rel_path: str) -> str:
+    repo = os.environ.get("GITHUB_REPOSITORY", "OWNER/REPO")
+    branch = os.environ.get("GITHUB_REF_NAME", "main")
+    return f"https://raw.githubusercontent.com/{repo}/{branch}/{rel_path}"
 
-    if not plan_only:
-        print("Generating image...")
-        record["image_url"] = generator.make_image(plan)
-        print("Animating video...")
-        record["video_url"] = generator.make_video(plan, record["image_url"])
-        (out / "video.mp4").write_bytes(requests.get(record["video_url"], timeout=120).content)
 
-        if os.getenv("AUTO_POST", "").lower() == "true":
-            import poster
-            print("Posting to Instagram...")
-            record["instagram_media_id"] = poster.post_reel(record["video_url"], caption)
-            record["status"] = "posted"
-        else:
-            record["status"] = "ready_for_review"
+def main() -> int:
+    day = today_ist()
+    plan_file = ROOT / "plans" / f"{day}.json"
+    if not plan_file.exists():
+        print(f"No plan for {day}. Run the weekly Colab notebook.")
+        return 0
+    plan = json.loads(plan_file.read_text())
+    state = json.loads(STATE.read_text()) if STATE.exists() else {}
+    done = state.setdefault(str(day), {})
 
-    (out / "caption.txt").write_text(caption, encoding="utf-8")
-    (out / "plan.json").write_text(json.dumps(record, indent=2, ensure_ascii=False), encoding="utf-8")
-    history.append({k: record[k] for k in ("date", "pillar", "title")})
-    HISTORY.write_text(json.dumps(history, indent=2, ensure_ascii=False), encoding="utf-8")
-    print(f"Done -> {out}  status={record.get('status', 'plan_only')}")
+    dry = os.getenv("DRY_RUN", "").lower() == "true" or not os.getenv("IG_ACCESS_TOKEN")
+    if not dry:
+        import instagram
+    now_hm = now_ist().strftime("%H:%M")
+    OUT.mkdir(exist_ok=True)
+    errors = 0
+
+    for item in plan["items"]:
+        key = item["id"]
+        if key in done or item["slot"] > now_hm:
+            continue
+        files = [ROOT / im["file"] for im in item["images"]]
+        if not all(f.exists() for f in files):
+            print(f"{key}: images missing, skipping")
+            continue
+        try:
+            if item["type"] == "reel":
+                video = OUT / f"{day}_{key}.mp4"
+                reel_maker.make_reel([str(f) for f in files], item["hook"], str(video), CONFIG["seconds_per_image"])
+                media_id = "dry-run" if dry else instagram.post_reel(str(video), item["caption"])
+            else:
+                # Instagram downloads photos from a public URL, so the 4:5 crop must already be
+                # pushed to GitHub. Colab makes it; if missing, make it now and post next hour.
+                rel = f"{item['images'][0]['file'][:-4]}_ig.jpg"
+                if not (ROOT / rel).exists():
+                    reel_maker.make_post_image(str(files[0]), str(ROOT / rel))
+                    print(f"{key}: made 4:5 crop, will post on next run after it is pushed")
+                    continue
+                media_id = "dry-run" if dry else instagram.post_photo(raw_url(rel), item["caption"])
+            done[key] = {"media_id": media_id, "at": now_ist().isoformat(timespec="minutes")}
+            print(f"{key}: {'built (dry run)' if dry else 'posted'} -> {media_id}")
+        except Exception as e:  # keep going, retry next hour
+            errors += 1
+            print(f"{key}: FAILED {e}")
+
+    if not dry:
+        STATE.parent.mkdir(exist_ok=True)
+        STATE.write_text(json.dumps(state, indent=2))
+    return 1 if errors else 0
 
 
 if __name__ == "__main__":
-    main(plan_only="--plan-only" in sys.argv)
+    sys.exit(main())
