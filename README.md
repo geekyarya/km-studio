@@ -10,10 +10,8 @@
 
 ## Daily volume (ramps up to protect the new account)
 Set in `config.json`:
-- Week 1: 2 Reels + 2 posts a day
-- Week 2: 4 + 3
-- Week 3: 6 + 4
-- Day 21 onwards: 8 Reels + 5 posts a day
+- Days 0-6: 6 Reels + 5 posts a day
+- Day 7 onwards: 8 Reels + 5 posts a day
 
 Change the numbers in `ramp` in `config.json` to post more or less.
 

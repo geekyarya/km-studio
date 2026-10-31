@@ -5,44 +5,217 @@
     {
       "id": "reel0",
       "type": "reel",
-      "slot": "08:30",
+      "slot": "08:00",
       "pillar": "lifestyle",
       "outfit": "oversized hoodie and shorts, claw clip hair",
       "location": "a bookstore corner",
-      "hook": "Soft life only",
-      "caption": "GRWM aur thoda gossip ☕ Kya plan hai aaj?\n\n#selfcare #softlife #mumbaigirl #aesthetic #dayinmylife #genz #grwm #thatgirl #AIgenerated #kiaramehra",
+      "hook": "That girl routine",
+      "caption": "No makeup, no filter, still cute 😌\nMilte hain, jaan 💋\n\n#aesthetic #selfcare #genz #thatgirl #dayinmylife #mumbaigirl #softlife #matcha #AIgenerated #kiaramehra",
       "images": [
         {
           "file": "media/2026-11-06/reel0_0.jpg",
-          "prompt": "photo of a beautiful elegant 24 year old Indian woman, clearly a grown adult woman in her mid twenties, mature refined facial features, defined cheekbones and jawline, fair glowing skin, dark brown eyes, long thick dark hair, polished makeup, confident poised adult presence, fit womanly figure, modern professional fashion influencer, wearing oversized hoodie and shorts, claw clip hair, a bookstore corner, holding an iced coffee, candid smile, shot on 85mm, realistic skin texture, trendy instagram influencer photo, high detail",
-          "seed": 755498731
+          "prompt": "photo of a beautiful 24 year old adult Indian woman, mature features, long dark hair, wearing oversized hoodie and shorts, claw clip hair, a bookstore corner, holding an iced coffee, candid smile, realistic instagram photo, 85mm",
+          "seed": 1489165114
         },
         {
           "file": "media/2026-11-06/reel0_1.jpg",
-          "prompt": "photo of a beautiful elegant 24 year old Indian woman, clearly a grown adult woman in her mid twenties, mature refined facial features, defined cheekbones and jawline, fair glowing skin, dark brown eyes, long thick dark hair, polished makeup, confident poised adult presence, fit womanly figure, modern professional fashion influencer, wearing oversized hoodie and shorts, claw clip hair, a bookstore corner, lying on the bed scrolling phone, laughing, shot on 85mm, realistic skin texture, trendy instagram influencer photo, high detail",
-          "seed": 202843299
-        },
-        {
-          "file": "media/2026-11-06/reel0_2.jpg",
-          "prompt": "photo of a beautiful elegant 24 year old Indian woman, clearly a grown adult woman in her mid twenties, mature refined facial features, defined cheekbones and jawline, fair glowing skin, dark brown eyes, long thick dark hair, polished makeup, confident poised adult presence, fit womanly figure, modern professional fashion influencer, wearing oversized hoodie and shorts, claw clip hair, a bookstore corner, applying lip gloss in the mirror, shot on 85mm, realistic skin texture, trendy instagram influencer photo, high detail",
-          "seed": 18257707
+          "prompt": "photo of a beautiful 24 year old adult Indian woman, mature features, long dark hair, wearing oversized hoodie and shorts, claw clip hair, a bookstore corner, lying on the bed scrolling phone, laughing, realistic instagram photo, 85mm",
+          "seed": 876385705
         }
       ]
     },
     {
       "id": "post0",
       "type": "post",
-      "slot": "10:00",
+      "slot": "09:00",
       "pillar": "baddie_fashion",
       "outfit": "black corset top with low-rise baggy cargo pants and chunky sneakers",
-      "location": "a glass elevator mirror",
+      "location": "a high-end boutique fitting room mirror",
       "hook": null,
-      "caption": "Outfit on, ex blocked, vibe immaculate ✨\n\n#outfitinspo #baddie #fashionreels #indianinfluencer #ootd #genz #fitcheck #streetstyle #AIgenerated #kiaramehra",
+      "caption": "Kaun kaun isko steal karega? 👀\n✨\n\n#fitcheck #y2kfashion #streetstyle #fashionreels #indianinfluencer #genz #outfitinspo #ootd #AIgenerated #kiaramehra",
       "images": [
         {
           "file": "media/2026-11-06/post0_0.jpg",
-          "prompt": "photo of a beautiful elegant 24 year old Indian woman, clearly a grown adult woman in her mid twenties, mature refined facial features, defined cheekbones and jawline, fair glowing skin, dark brown eyes, long thick dark hair, polished makeup, confident poised adult presence, fit womanly figure, modern professional fashion influencer, wearing black corset top with low-rise baggy cargo pants and chunky sneakers, a glass elevator mirror, leaning on a wall, looking over sunglasses, shot on 85mm, realistic skin texture, trendy instagram influencer photo, high detail",
-          "seed": 1129513323
+          "prompt": "photo of a beautiful 24 year old adult Indian woman, mature features, long dark hair, wearing black corset top with low-rise baggy cargo pants and chunky sneakers, a high-end boutique fitting room mirror, leaning on a wall, looking over sunglasses, realistic instagram photo, 85mm",
+          "seed": 1466118466
+        }
+      ]
+    },
+    {
+      "id": "reel1",
+      "type": "reel",
+      "slot": "10:30",
+      "pillar": "pov_flirty",
+      "outfit": "lilac satin co-ord",
+      "location": "a car passenger seat at night with city lights",
+      "hook": "POV: you made me laugh",
+      "caption": "Itna mat dekho, pyaar ho jayega 😏\n\n#trending #reelsindia #relatable #explorepage #flirty #instareels #genz #pov #AIgenerated #kiaramehra",
+      "images": [
+        {
+          "file": "media/2026-11-06/reel1_0.jpg",
+          "prompt": "photo of a beautiful 24 year old adult Indian woman, mature features, long dark hair, wearing lilac satin co-ord, a car passenger seat at night with city lights, looking at camera with a teasing smile, realistic instagram photo, 85mm",
+          "seed": 517303478
+        },
+        {
+          "file": "media/2026-11-06/reel1_1.jpg",
+          "prompt": "photo of a beautiful 24 year old adult Indian woman, mature features, long dark hair, wearing lilac satin co-ord, a car passenger seat at night with city lights, raising one eyebrow, smirking, realistic instagram photo, 85mm",
+          "seed": 1873352330
+        }
+      ]
+    },
+    {
+      "id": "reel2",
+      "type": "reel",
+      "slot": "12:30",
+      "pillar": "baddie_fashion",
+      "outfit": "oversized blazer worn as a dress with gold chains",
+      "location": "a rooftop at golden hour with the Mumbai skyline",
+      "hook": "Rate the fit 1-10",
+      "caption": "Main character energy only 🎬 Agree?\n\n#indianinfluencer #mumbaigirl #fitcheck #ootd #fashionreels #y2kfashion #baddie #streetstyle #AIgenerated #kiaramehra",
+      "images": [
+        {
+          "file": "media/2026-11-06/reel2_0.jpg",
+          "prompt": "photo of a beautiful 24 year old adult Indian woman, mature features, long dark hair, wearing oversized blazer worn as a dress with gold chains, a rooftop at golden hour with the Mumbai skyline, leaning on a wall, looking over sunglasses, realistic instagram photo, 85mm",
+          "seed": 163263174
+        },
+        {
+          "file": "media/2026-11-06/reel2_1.jpg",
+          "prompt": "photo of a beautiful 24 year old adult Indian woman, mature features, long dark hair, wearing oversized blazer worn as a dress with gold chains, a rooftop at golden hour with the Mumbai skyline, sitting on stairs, legs crossed, playful smile, realistic instagram photo, 85mm",
+          "seed": 203093707
+        }
+      ]
+    },
+    {
+      "id": "post1",
+      "type": "post",
+      "slot": "13:30",
+      "pillar": "night_out",
+      "outfit": "red satin cowl-neck mini dress",
+      "location": "an elevator mirror before a party",
+      "hook": null,
+      "caption": "Weekend plans? Mere saath chaloge? 🍸\n💋\n\n#baddie #nightlife #genz #partylook #nightout #mumbainights #reelsindia #weekendvibes #AIgenerated #kiaramehra",
+      "images": [
+        {
+          "file": "media/2026-11-06/post1_0.jpg",
+          "prompt": "photo of a beautiful 24 year old adult Indian woman, mature features, long dark hair, wearing red satin cowl-neck mini dress, an elevator mirror before a party, dancing with motion blur, laughing, realistic instagram photo, 85mm",
+          "seed": 676426759
+        }
+      ]
+    },
+    {
+      "id": "reel3",
+      "type": "reel",
+      "slot": "14:30",
+      "pillar": "night_out",
+      "outfit": "little black dress with a thigh slit",
+      "location": "the backseat of a car with city lights at night",
+      "hook": "Saturday night energy",
+      "caption": "Mumbai nights, bad decisions, good pictures 🖤\n\n#partylook #weekendvibes #genz #clubbing #reelsindia #baddie #nightout #nightlife #AIgenerated #kiaramehra",
+      "images": [
+        {
+          "file": "media/2026-11-06/reel3_0.jpg",
+          "prompt": "photo of a beautiful 24 year old adult Indian woman, mature features, long dark hair, wearing little black dress with a thigh slit, the backseat of a car with city lights at night, biting lip slightly, playful eyes, realistic instagram photo, 85mm",
+          "seed": 271063408
+        },
+        {
+          "file": "media/2026-11-06/reel3_1.jpg",
+          "prompt": "photo of a beautiful 24 year old adult Indian woman, mature features, long dark hair, wearing little black dress with a thigh slit, the backseat of a car with city lights at night, flash photo, hand in hair, confident stare, realistic instagram photo, 85mm",
+          "seed": 372164507
+        }
+      ]
+    },
+    {
+      "id": "post2",
+      "type": "post",
+      "slot": "16:00",
+      "pillar": "fitness",
+      "outfit": "olive green athleisure set",
+      "location": "a home workout corner with plants",
+      "hook": null,
+      "caption": "Pilates princess era unlocked ✨\n✨\n\n#workout #gymgirl #gymlife #pilates #hotgirlwalk #fitgirl #gymtok #fitnessmotivation #AIgenerated #kiaramehra",
+      "images": [
+        {
+          "file": "media/2026-11-06/post2_0.jpg",
+          "prompt": "photo of a beautiful 24 year old adult Indian woman, mature features, long dark hair, wearing olive green athleisure set, a home workout corner with plants, drinking from a water bottle, glowing and sweaty, realistic instagram photo, 85mm",
+          "seed": 1571057859
+        }
+      ]
+    },
+    {
+      "id": "reel4",
+      "type": "reel",
+      "slot": "17:00",
+      "pillar": "fitness",
+      "outfit": "olive green athleisure set",
+      "location": "a beach at sunrise in Juhu",
+      "hook": "Pilates princess era",
+      "caption": "Pilates princess era unlocked ✨\n✨\n\n#gymgirl #fitgirl #gymlife #hotgirlwalk #pilates #fitnessmotivation #gymtok #workout #AIgenerated #kiaramehra",
+      "images": [
+        {
+          "file": "media/2026-11-06/reel4_0.jpg",
+          "prompt": "photo of a beautiful 24 year old adult Indian woman, mature features, long dark hair, wearing olive green athleisure set, a beach at sunrise in Juhu, stretching on a mat, focused, realistic instagram photo, 85mm",
+          "seed": 1358966950
+        },
+        {
+          "file": "media/2026-11-06/reel4_1.jpg",
+          "prompt": "photo of a beautiful 24 year old adult Indian woman, mature features, long dark hair, wearing olive green athleisure set, a beach at sunrise in Juhu, doing a squat, side profile, realistic instagram photo, 85mm",
+          "seed": 688694247
+        }
+      ]
+    },
+    {
+      "id": "reel5",
+      "type": "reel",
+      "slot": "19:00",
+      "pillar": "lifestyle",
+      "outfit": "matching lounge set in beige",
+      "location": "an aesthetic bedroom with fairy lights",
+      "hook": "Get ready with me",
+      "caption": "GRWM aur thoda gossip ☕ Kya plan hai aaj?\n\n#thatgirl #selfcare #mumbaigirl #matcha #softlife #dayinmylife #aesthetic #genz #AIgenerated #kiaramehra",
+      "images": [
+        {
+          "file": "media/2026-11-06/reel5_0.jpg",
+          "prompt": "photo of a beautiful 24 year old adult Indian woman, mature features, long dark hair, wearing matching lounge set in beige, an aesthetic bedroom with fairy lights, applying lip gloss in the mirror, realistic instagram photo, 85mm",
+          "seed": 452915788
+        },
+        {
+          "file": "media/2026-11-06/reel5_1.jpg",
+          "prompt": "photo of a beautiful 24 year old adult Indian woman, mature features, long dark hair, wearing matching lounge set in beige, an aesthetic bedroom with fairy lights, lying on the bed scrolling phone, laughing, realistic instagram photo, 85mm",
+          "seed": 1705114552
+        }
+      ]
+    },
+    {
+      "id": "post3",
+      "type": "post",
+      "slot": "20:00",
+      "pillar": "lifestyle",
+      "outfit": "oversized hoodie and shorts, claw clip hair",
+      "location": "a skincare shelf mirror",
+      "hook": null,
+      "caption": "GRWM aur thoda gossip ☕ Kya plan hai aaj?\n\n#genz #selfcare #dayinmylife #mumbaigirl #softlife #thatgirl #matcha #grwm #AIgenerated #kiaramehra",
+      "images": [
+        {
+          "file": "media/2026-11-06/post3_0.jpg",
+          "prompt": "photo of a beautiful 24 year old adult Indian woman, mature features, long dark hair, wearing oversized hoodie and shorts, claw clip hair, a skincare shelf mirror, holding an iced coffee, candid smile, realistic instagram photo, 85mm",
+          "seed": 89170992
+        }
+      ]
+    },
+    {
+      "id": "post4",
+      "type": "post",
+      "slot": "22:00",
+      "pillar": "pov_flirty",
+      "outfit": "oversized white shirt and messy bun",
+      "location": "a candle-lit restaurant table",
+      "hook": null,
+      "caption": "Itna mat dekho, pyaar ho jayega 😏\n\n#reels #reelsindia #pov #trending #relatable #genz #flirty #instareels #AIgenerated #kiaramehra",
+      "images": [
+        {
+          "file": "media/2026-11-06/post4_0.jpg",
+          "prompt": "photo of a beautiful 24 year old adult Indian woman, mature features, long dark hair, wearing oversized white shirt and messy bun, a candle-lit restaurant table, looking at camera with a teasing smile, realistic instagram photo, 85mm",
+          "seed": 1342010638
         }
       ]
     }

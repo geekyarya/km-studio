@@ -44,9 +44,14 @@ def main() -> int:
     OUT.mkdir(exist_ok=True)
     errors = 0
 
+    max_per_run = int(os.getenv("MAX_PER_RUN", "2"))  # never dump a backlog all at once
+    published = 0
     for item in plan["items"]:
         key = item["id"]
         if key in done or item["slot"] > now_hm:
+            continue
+        if published >= max_per_run:
+            print(f"{key}: waiting for next run (max {max_per_run} per hour)")
             continue
         files = [ROOT / im["file"] for im in item["images"]]
         if not all(f.exists() for f in files):
@@ -67,6 +72,7 @@ def main() -> int:
                     continue
                 media_id = "dry-run" if dry else instagram.post_photo(raw_url(rel), item["caption"])
             done[key] = {"media_id": media_id, "at": now_ist().isoformat(timespec="minutes")}
+            published += 1
             print(f"{key}: {'built (dry run)' if dry else 'posted'} -> {media_id}")
         except Exception as e:  # keep going, retry next hour
             errors += 1
