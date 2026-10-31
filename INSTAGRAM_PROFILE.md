@@ -20,7 +20,7 @@ digital creator 🤖 #AIgenerated
 Link in bio: leave it empty for now. Add the subscription link once she has around 10k followers.
 
 ## Profile picture prompt
-> {persona.LOOK}, close-up headshot, soft smile looking at camera, wearing a deep maroon silk saree blouse with gold jhumkas, warm golden-hour light, blurred Mumbai skyline background, high detail, centered face
+> Use Kiara's chosen face (kiara/face.jpg) - crop it to a centered close-up for the profile picture.
 
 The face should fill about 60% of the frame so it reads well as a small circle.
 
