@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-03",
+  "festival": null,
+  "items": [
+    {
+      "id": "reel0",
+      "type": "reel",
+      "slot": "08:30",
+      "pillar": "baddie_fashion",
+      "outfit": "oversized blazer worn as a dress with gold chains",
+      "location": "a graffiti wall in Bandra",
+      "hook": "This or that?",
+      "caption": "Too cute to care, too hot to ignore 💅\n\n#mumbaigirl #fitcheck #baddie #indianinfluencer #ootd #fashionreels #genz #streetstyle #AIgenerated #kiaramehra",
+      "images": [
+        {
+          "file": "media/2026-11-03/reel0_0.jpg",
+          "prompt": "photo of a beautiful elegant 24 year old Indian woman, clearly a grown adult woman in her mid twenties, mature refined facial features, defined cheekbones and jawline, fair glowing skin, dark brown eyes, long thick dark hair, polished makeup, confident poised adult presence, fit womanly figure, modern professional fashion influencer, wearing oversized blazer worn as a dress with gold chains, a graffiti wall in Bandra, mirror selfie holding phone, hip popped, smirking, shot on 85mm, realistic skin texture, trendy instagram influencer photo, high detail",
+          "seed": 1031831827
+        },
+        {
+          "file": "media/2026-11-03/reel0_1.jpg",
+          "prompt": "photo of a beautiful elegant 24 year old Indian woman, clearly a grown adult woman in her mid twenties, mature refined facial features, defined cheekbones and jawline, fair glowing skin, dark brown eyes, long thick dark hair, polished makeup, confident poised adult presence, fit womanly figure, modern professional fashion influencer, wearing oversized blazer worn as a dress with gold chains, a graffiti wall in Bandra, candid laugh looking away, shot on 85mm, realistic skin texture, trendy instagram influencer photo, high detail",
+          "seed": 602865282
+        },
+        {
+          "file": "media/2026-11-03/reel0_2.jpg",
+          "prompt": "photo of a beautiful elegant 24 year old Indian woman, clearly a grown adult woman in her mid twenties, mature refined facial features, defined cheekbones and jawline, fair glowing skin, dark brown eyes, long thick dark hair, polished makeup, confident poised adult presence, fit womanly figure, modern professional fashion influencer, wearing oversized blazer worn as a dress with gold chains, a graffiti wall in Bandra, leaning on a wall, looking over sunglasses, shot on 85mm, realistic skin texture, trendy instagram influencer photo, high detail",
+          "seed": 357077922
+        }
+      ]
+    },
+    {
+      "id": "post0",
+      "type": "post",
+      "slot": "10:00",
+      "pillar": "night_out",
+      "outfit": "metallic halter top and black mini skirt",
+      "location": "a rooftop bar overlooking the Mumbai skyline at night",
+      "hook": null,
+      "caption": "Raat abhi baaki hai 🌙\nMilte hain, jaan 💋\n\n#baddie #partylook #reelsindia #mumbainights #nightout #genz #weekendvibes #clubbing #AIgenerated #kiaramehra",
+      "images": [
+        {
+          "file": "media/2026-11-03/post0_0.jpg",
+          "prompt": "photo of a beautiful elegant 24 year old Indian woman, clearly a grown adult woman in her mid twenties, mature refined facial features, defined cheekbones and jawline, fair glowing skin, dark brown eyes, long thick dark hair, polished makeup, confident poised adult presence, fit womanly figure, modern professional fashion influencer, wearing metallic halter top and black mini skirt, a rooftop bar overlooking the Mumbai skyline at night, leaning on the bar counter, looking back at camera, shot on 85mm, realistic skin texture, trendy instagram influencer photo, high detail",
+          "seed": 1673396127
+        }
+      ]
+    }
+  ]
+}

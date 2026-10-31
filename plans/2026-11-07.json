@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-07",
+  "festival": null,
+  "items": [
+    {
+      "id": "reel0",
+      "type": "reel",
+      "slot": "08:30",
+      "pillar": "baddie_fashion",
+      "outfit": "denim-on-denim co-ord, crop jacket and low-rise jeans",
+      "location": "a minimalist concrete studio with a ring light",
+      "hook": "POV: you saw me first",
+      "caption": "Too cute to care, too hot to ignore 💅\n✨\n\n#indianinfluencer #mumbaigirl #fitcheck #genz #fashionreels #outfitinspo #ootd #streetstyle #AIgenerated #kiaramehra",
+      "images": [
+        {
+          "file": "media/2026-11-07/reel0_0.jpg",
+          "prompt": "photo of a beautiful elegant 24 year old Indian woman, clearly a grown adult woman in her mid twenties, mature refined facial features, defined cheekbones and jawline, fair glowing skin, dark brown eyes, long thick dark hair, polished makeup, confident poised adult presence, fit womanly figure, modern professional fashion influencer, wearing denim-on-denim co-ord, crop jacket and low-rise jeans, a minimalist concrete studio with a ring light, leaning on a wall, looking over sunglasses, shot on 85mm, realistic skin texture, trendy instagram influencer photo, high detail",
+          "seed": 1530242747
+        },
+        {
+          "file": "media/2026-11-07/reel0_1.jpg",
+          "prompt": "photo of a beautiful elegant 24 year old Indian woman, clearly a grown adult woman in her mid twenties, mature refined facial features, defined cheekbones and jawline, fair glowing skin, dark brown eyes, long thick dark hair, polished makeup, confident poised adult presence, fit womanly figure, modern professional fashion influencer, wearing denim-on-denim co-ord, crop jacket and low-rise jeans, a minimalist concrete studio with a ring light, sitting on stairs, legs crossed, playful smile, shot on 85mm, realistic skin texture, trendy instagram influencer photo, high detail",
+          "seed": 771094311
+        },
+        {
+          "file": "media/2026-11-07/reel0_2.jpg",
+          "prompt": "photo of a beautiful elegant 24 year old Indian woman, clearly a grown adult woman in her mid twenties, mature refined facial features, defined cheekbones and jawline, fair glowing skin, dark brown eyes, long thick dark hair, polished makeup, confident poised adult presence, fit womanly figure, modern professional fashion influencer, wearing denim-on-denim co-ord, crop jacket and low-rise jeans, a minimalist concrete studio with a ring light, mirror selfie holding phone, hip popped, smirking, shot on 85mm, realistic skin texture, trendy instagram influencer photo, high detail",
+          "seed": 1676333331
+        }
+      ]
+    },
+    {
+      "id": "post0",
+      "type": "post",
+      "slot": "10:00",
+      "pillar": "fitness",
+      "outfit": "cream seamless gym set",
+      "location": "a beach at sunrise in Juhu",
+      "hook": null,
+      "caption": "Gym mein flirt allowed hai kya? 😏\n💋\n\n#workout #gymlife #pilates #fitgirl #fitness #hotgirlwalk #fitnessmotivation #gymtok #AIgenerated #kiaramehra",
+      "images": [
+        {
+          "file": "media/2026-11-07/post0_0.jpg",
+          "prompt": "photo of a beautiful elegant 24 year old Indian woman, clearly a grown adult woman in her mid twenties, mature refined facial features, defined cheekbones and jawline, fair glowing skin, dark brown eyes, long thick dark hair, polished makeup, confident poised adult presence, fit womanly figure, modern professional fashion influencer, wearing cream seamless gym set, a beach at sunrise in Juhu, doing a squat, side profile, shot on 85mm, realistic skin texture, trendy instagram influencer photo, high detail",
+          "seed": 1497634822
+        }
+      ]
+    }
+  ]
+}

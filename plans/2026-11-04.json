@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-04",
+  "festival": null,
+  "items": [
+    {
+      "id": "reel0",
+      "type": "reel",
+      "slot": "08:30",
+      "pillar": "lifestyle",
+      "outfit": "cropped tee and track pants",
+      "location": "a skincare shelf mirror",
+      "hook": "That girl routine",
+      "caption": "Soft life, hard boundaries 💅\n✨\n\n#softlife #mumbaigirl #grwm #dayinmylife #genz #selfcare #thatgirl #aesthetic #AIgenerated #kiaramehra",
+      "images": [
+        {
+          "file": "media/2026-11-04/reel0_0.jpg",
+          "prompt": "photo of a beautiful elegant 24 year old Indian woman, clearly a grown adult woman in her mid twenties, mature refined facial features, defined cheekbones and jawline, fair glowing skin, dark brown eyes, long thick dark hair, polished makeup, confident poised adult presence, fit womanly figure, modern professional fashion influencer, wearing cropped tee and track pants, a skincare shelf mirror, sipping matcha, looking out the window, shot on 85mm, realistic skin texture, trendy instagram influencer photo, high detail",
+          "seed": 649711964
+        },
+        {
+          "file": "media/2026-11-04/reel0_1.jpg",
+          "prompt": "photo of a beautiful elegant 24 year old Indian woman, clearly a grown adult woman in her mid twenties, mature refined facial features, defined cheekbones and jawline, fair glowing skin, dark brown eyes, long thick dark hair, polished makeup, confident poised adult presence, fit womanly figure, modern professional fashion influencer, wearing cropped tee and track pants, a skincare shelf mirror, holding an iced coffee, candid smile, shot on 85mm, realistic skin texture, trendy instagram influencer photo, high detail",
+          "seed": 370097201
+        },
+        {
+          "file": "media/2026-11-04/reel0_2.jpg",
+          "prompt": "photo of a beautiful elegant 24 year old Indian woman, clearly a grown adult woman in her mid twenties, mature refined facial features, defined cheekbones and jawline, fair glowing skin, dark brown eyes, long thick dark hair, polished makeup, confident poised adult presence, fit womanly figure, modern professional fashion influencer, wearing cropped tee and track pants, a skincare shelf mirror, lying on the bed scrolling phone, laughing, shot on 85mm, realistic skin texture, trendy instagram influencer photo, high detail",
+          "seed": 87721024
+        }
+      ]
+    },
+    {
+      "id": "post0",
+      "type": "post",
+      "slot": "10:00",
+      "pillar": "fitness",
+      "outfit": "black sports bra and high-waist leggings",
+      "location": "a modern gym with mirrors",
+      "hook": null,
+      "caption": "Leg day pe bhi slay 😮‍💨 Tumhara favourite workout?\nMilte hain, jaan 💋\n\n#gymlife #hotgirlwalk #workout #fitgirl #gymtok #fitnessmotivation #fitness #gymgirl #AIgenerated #kiaramehra",
+      "images": [
+        {
+          "file": "media/2026-11-04/post0_0.jpg",
+          "prompt": "photo of a beautiful elegant 24 year old Indian woman, clearly a grown adult woman in her mid twenties, mature refined facial features, defined cheekbones and jawline, fair glowing skin, dark brown eyes, long thick dark hair, polished makeup, confident poised adult presence, fit womanly figure, modern professional fashion influencer, wearing black sports bra and high-waist leggings, a modern gym with mirrors, doing a squat, side profile, shot on 85mm, realistic skin texture, trendy instagram influencer photo, high detail",
+          "seed": 1021840436
+        }
+      ]
+    }
+  ]
+}
