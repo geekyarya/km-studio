@@ -2,14 +2,44 @@
   "start_date": "2026-11-03",
   "timezone_offset_minutes": 330,
   "ramp": [
-    {"from_day": 0,  "reels": 1, "posts": 1},
-    {"from_day": 7,  "reels": 2, "posts": 1},
-    {"from_day": 14, "reels": 3, "posts": 2},
-    {"from_day": 21, "reels": 4, "posts": 3},
-    {"from_day": 30, "reels": 5, "posts": 3}
+    {
+      "from_day": 0,
+      "reels": 2,
+      "posts": 2
+    },
+    {
+      "from_day": 7,
+      "reels": 4,
+      "posts": 3
+    },
+    {
+      "from_day": 14,
+      "reels": 6,
+      "posts": 4
+    },
+    {
+      "from_day": 21,
+      "reels": 8,
+      "posts": 5
+    }
   ],
-  "reel_slots": ["08:30", "12:30", "17:00", "19:30", "21:30", "23:00"],
-  "post_slots": ["10:00", "15:00", "20:30", "22:15"],
-  "images_per_reel": 3,
-  "seconds_per_image": 2.6
+  "reel_slots": [
+    "08:00",
+    "10:30",
+    "12:30",
+    "14:30",
+    "17:00",
+    "19:00",
+    "21:00",
+    "23:00"
+  ],
+  "post_slots": [
+    "09:00",
+    "13:30",
+    "16:00",
+    "20:00",
+    "22:00"
+  ],
+  "images_per_reel": 2,
+  "seconds_per_image": 3.5
 }

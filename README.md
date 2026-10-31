@@ -10,13 +10,12 @@
 
 ## Daily volume (ramps up to protect the new account)
 Set in `config.json`:
-- Week 1: 1 Reel + 1 post a day
-- Week 2: 2 + 1
-- Week 3: 3 + 2
-- Week 4: 4 + 3
-- Day 30 onwards: 5 Reels + 3 posts a day
+- Week 1: 2 Reels + 2 posts a day
+- Week 2: 4 + 3
+- Week 3: 6 + 4
+- Day 21 onwards: 8 Reels + 5 posts a day
 
-Raise the numbers in `ramp` if you want more. Up to 6 Reels and 4 posts a day fit the time slots.
+Change the numbers in `ramp` in `config.json` to post more or less.
 
 ## Setup (once)
 1. **GitHub:** create a **public** repo with a neutral name (for example `km-studio`) and push this folder. Photos must be publicly reachable for Instagram to fetch them, and public repos get unlimited Actions minutes.

@@ -3,12 +3,9 @@ so prompts only need to describe body, styling and scene."""
 
 NAME = "Kiara Mehra"
 
-LOOK = (
-    "photo of a beautiful elegant 24 year old Indian woman, clearly a grown adult woman in her mid twenties, "
-    "mature refined facial features, defined cheekbones and jawline, fair glowing skin, dark brown eyes, "
-    "long thick dark hair, polished makeup, confident poised adult presence, fit womanly figure, "
-    "modern professional fashion influencer"
-)
+# Kept SHORT on purpose: the image model only reads ~77 tokens, and the face comes from
+# kiara/face.jpg anyway - so the outfit, location and pose must fit after this.
+LOOK = "photo of a beautiful 24 year old adult Indian woman, mature features, long dark hair"
 
 # Used only for choosing her face (Step 1 of the Colab notebook).
 FACE_PROMPT = (
@@ -20,7 +17,7 @@ FACE_PROMPT = (
     "successful modern woman, ultra realistic skin texture, sharp focus, 85mm"
 )
 
-QUALITY = "shot on 85mm, realistic skin texture, trendy instagram influencer photo, high detail"
+QUALITY = "realistic instagram photo, 85mm"
 
 NEGATIVE = (
     "saree, lehenga, salwar, kurta, dupatta, ethnic wear, traditional indian clothing, "
