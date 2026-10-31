@@ -1,5 +1,7 @@
-"""Instagram Graph API publishing (free). Reels are uploaded directly from the file,
-photos are fetched by Instagram from their public GitHub raw URL."""
+"""Instagram API with Instagram Login (free, no Facebook Page needed).
+Reels are uploaded directly from the file; photos are fetched by Instagram from their
+public GitHub raw URL. Needs a Creator/Business Instagram account and a token with
+instagram_business_basic + instagram_business_content_publish."""
 import os
 import pathlib
 import time
@@ -7,7 +9,7 @@ import time
 import requests
 
 VERSION = "v21.0"
-GRAPH = f"https://graph.facebook.com/{VERSION}"
+GRAPH = f"https://graph.instagram.com/{VERSION}"
 
 
 def _creds():
