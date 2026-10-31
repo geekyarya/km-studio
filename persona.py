@@ -4,7 +4,7 @@ so prompts only need to describe body, styling and scene."""
 NAME = "Kiara Mehra"
 
 LOOK = (
-    "photo of a beautiful elegant 28 year old Indian woman, clearly an adult woman in her late twenties, "
+    "photo of a beautiful elegant 24 year old Indian woman, clearly a grown adult woman in her mid twenties, "
     "mature refined facial features, defined cheekbones and jawline, fair glowing skin, dark brown eyes, "
     "long thick dark hair, polished makeup, confident poised adult presence, fit womanly figure, "
     "modern professional fashion influencer"
@@ -12,8 +12,8 @@ LOOK = (
 
 # Used only for choosing her face (Step 1 of the Colab notebook).
 FACE_PROMPT = (
-    "close-up editorial portrait of a beautiful elegant 28 year old Indian woman from Delhi, "
-    "clearly an adult woman in her late twenties, mature refined facial features, defined cheekbones, "
+    "close-up editorial portrait of a beautiful elegant 24 year old Indian woman from Delhi, "
+    "clearly a grown adult woman in her mid twenties, mature refined facial features, defined cheekbones, "
     "strong jawline, fair glowing skin, dark brown almond eyes, groomed brows, polished soft glam makeup, "
     "long thick dark hair, confident poised expression, subtle smile, small silver hoop earrings, "
     "black blazer over a simple black top, soft studio lighting, fashion magazine portrait of a "
