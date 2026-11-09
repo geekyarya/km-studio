@@ -59,3 +59,13 @@ def post_photo(image_url: str, caption: str) -> str:
                       data={"image_url": image_url, "caption": caption, "access_token": token}, timeout=60)
     r.raise_for_status()
     return _wait_and_publish(r.json()["id"])
+
+
+def post_reel_url(video_url: str, caption: str) -> str:
+    """Reel from a public video URL (same download method that works for photos)."""
+    ig_user, token = _creds()
+    r = requests.post(f"{GRAPH}/{ig_user}/media", data={
+        "media_type": "REELS", "video_url": video_url, "caption": caption,
+        "share_to_feed": "true", "access_token": token}, timeout=60)
+    r.raise_for_status()
+    return _wait_and_publish(r.json()["id"])

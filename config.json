@@ -31,5 +31,11 @@
     "22:00"
   ],
   "images_per_reel": 2,
-  "seconds_per_image": 3.5
+  "seconds_per_image": 3.5,
+  "pillar_weights": {
+    "cricket": 40,
+    "bollywood": 25,
+    "rahasyamai": 20,
+    "news": 15
+  }
 }

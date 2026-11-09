@@ -2,7 +2,7 @@ name: Kiara autopost
 
 on:
   schedule:
-    - cron: "35 * * * *"   # every hour at :05 IST - posts whatever slot is due
+    - cron: "5,20,35,50 * * * *"   # every 15 min - GitHub skips many runs, so check often
   workflow_dispatch:
     inputs:
       post_now:
@@ -37,5 +37,5 @@ jobs:
         run: |
           git config user.name "kiara-bot"
           git config user.email "kiara-bot@users.noreply.github.com"
-          git add state/ media/
+          git add state/ media/ || true
           git diff --cached --quiet || (git commit -m "autopost $(date -u +%FT%H:%M)" && git pull --rebase && git push)

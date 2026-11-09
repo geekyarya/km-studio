@@ -58,7 +58,8 @@ def make_item(rng, kind, slot, pillar_key, used, day, idx, festival=None, n_imag
     while len(poses) < n_images:
         poses.append(rng.choice(p["poses"]))
 
-    caption = rng.choice(p["captions"])
+    hook = rng.choice(p["hooks"])
+    caption = (f"{hook}\n\n" if p.get("news_query") is None else "") + rng.choice(p["reactions"])
     sign = rng.choice(bank.SIGN_OFFS)
     tags = rng.sample(p["tags"], k=min(8, len(p["tags"]))) + bank.ALWAYS_TAGS
     item_id = f"{kind}{idx}"
@@ -69,7 +70,10 @@ def make_item(rng, kind, slot, pillar_key, used, day, idx, festival=None, n_imag
         "pillar": pillar_key,
         "outfit": outfit,
         "location": location,
-        "hook": rng.choice(p["hooks"]) if kind == "reel" else None,
+        "hook": hook,
+        "news_query": p.get("news_query"),
+        "reaction": rng.choice(p["reactions"]),
+        "tags": " ".join(tags),
         "caption": f"{caption}\n{sign}".strip() + "\n\n" + " ".join(tags),
         "images": [
             {
@@ -86,16 +90,29 @@ def plan_day(day: dt.date) -> dict:
     rng = random.Random(f"kiara-{day}")
     reels, posts = volume_for(day)
     used = recent_combos(day)
-    pillars = list(bank.PILLARS)
-    rng.shuffle(pillars)
+    weights = CONFIG.get("pillar_weights", {k: 1 for k in bank.PILLARS})
+    names = [k for k in bank.PILLARS if weights.get(k, 0) > 0]
+
+    # Fixed daily quota by weight (largest remainder), so cricket always leads, then shuffle the order.
+    total_items = reels + posts
+    tw = sum(weights[k] for k in names)
+    raw = {k: total_items * weights[k] / tw for k in names}
+    quota = {k: int(raw[k]) for k in names}
+    for k in sorted(names, key=lambda k: raw[k] - quota[k], reverse=True)[: total_items - sum(quota.values())]:
+        quota[k] += 1
+    queue = [k for k in names for _ in range(quota[k])]
+    rng.shuffle(queue)
+
+    def pick_pillar():
+        return queue.pop()
     festival = bank.MOVABLE_FESTIVALS.get(str(day)) or bank.FESTIVALS.get(day.strftime("%m-%d"))
 
     items = []
     for i in range(reels):
-        items.append(make_item(rng, "reel", CONFIG["reel_slots"][i], pillars[i % len(pillars)], used, day, i,
+        items.append(make_item(rng, "reel", CONFIG["reel_slots"][i], pick_pillar(), used, day, i,
                                festival if i == 0 else None, CONFIG["images_per_reel"]))
     for i in range(posts):
-        pk = pillars[(i + 2) % len(pillars)]
+        pk = pick_pillar()
         items.append(make_item(rng, "post", CONFIG["post_slots"][i], pk, used, day, i,
                                festival if i == 0 else None))
     return {"date": str(day), "festival": festival, "items": sorted(items, key=lambda x: x["slot"])}
