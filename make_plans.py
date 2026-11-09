@@ -59,7 +59,8 @@ def make_item(rng, kind, slot, pillar_key, used, day, idx, festival=None, n_imag
         poses.append(rng.choice(p["poses"]))
 
     hook = rng.choice(p["hooks"])
-    caption = (f"{hook}\n\n" if p.get("news_query") is None else "") + rng.choice(p["reactions"])
+    lines = p.get("reactions") or p["captions"]
+    caption = (f"{hook}\n\n" if "reactions" in p and p.get("news_query") is None else "") + rng.choice(lines)
     sign = rng.choice(bank.SIGN_OFFS)
     tags = rng.sample(p["tags"], k=min(8, len(p["tags"]))) + bank.ALWAYS_TAGS
     item_id = f"{kind}{idx}"
@@ -72,7 +73,7 @@ def make_item(rng, kind, slot, pillar_key, used, day, idx, festival=None, n_imag
         "location": location,
         "hook": hook,
         "news_query": p.get("news_query"),
-        "reaction": rng.choice(p["reactions"]),
+        "reaction": rng.choice(lines),
         "tags": " ".join(tags),
         "caption": f"{caption}\n{sign}".strip() + "\n\n" + " ".join(tags),
         "images": [

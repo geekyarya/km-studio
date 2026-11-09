@@ -1,122 +1,166 @@
-"""Offline content library. Topic mix (weights in config.json "pillar_weights"):
-cricket > bollywood > rahasyamai > news. Kiara appears in a scene that matches each topic.
-Cricket / Bollywood / news items get a fresh real headline from Google News at posting time
-(see news.py); rahasyamai uses the evergreen mysteries below.
-Never depict real players or celebrities - images show only Kiara."""
+"""Offline content library - modern Gen Z Mumbai baddie. Combinations produce thousands of
+unique posts with no paid AI. Add your own lines anytime to keep it fresh.
+No traditional wear: sarees, lehengas, bindis etc. are also blocked in persona.NEGATIVE."""
 
 PILLARS = {
-    "cricket": {
-        "news_query": "cricket India",
+    "baddie_fashion": {
         "outfits": [
-            "blue cricket fan jersey and denim shorts", "oversized blue fan jersey and a white cap",
-            "white t-shirt with a small tricolour painted on her cheek", "orange and blue fan t-shirt and jeans",
-            "blue jersey tied at the waist with white sneakers",
+            "black corset top with low-rise baggy cargo pants and chunky sneakers",
+            "white baby tee, micro mini skirt and knee-high boots",
+            "oversized leather jacket over a black bralette and straight-leg jeans",
+            "satin slip dress in champagne with strappy heels",
+            "cropped cardigan, pleated mini skirt and loafers, y2k style",
+            "denim-on-denim co-ord, crop jacket and low-rise jeans",
+            "red halter crop top and high-waist wide-leg trousers",
+            "sheer-sleeve black bodysuit with leather mini skirt",
+            "oversized blazer worn as a dress with gold chains",
+            "matching knit crop top and maxi skirt set in mocha brown",
         ],
         "locations": [
-            "packed cricket stadium stands at night under floodlights", "a sports bar watching cricket on a big screen",
-            "living room watching a cricket match on TV with snacks", "a gully cricket street in Mumbai at golden hour",
-            "a cricket ground boundary rope at sunset",
+            "a minimalist concrete studio with a ring light", "an aesthetic Bandra cafe with neon signs",
+            "a glass elevator mirror", "a luxury hotel lobby with marble floors",
+            "a graffiti wall in Bandra", "a rooftop at golden hour with the Mumbai skyline",
+            "a high-end boutique fitting room mirror", "a parking garage at night with harsh flash",
         ],
         "poses": [
-            "cheering with both arms raised, excited", "holding a cricket bat on her shoulder, confident smile",
-            "biting her nails nervously watching the match", "celebrating with a fist pump and big smile",
-            "waving a small tricolour flag and cheering",
+            "mirror selfie holding phone, hip popped, smirking", "walking towards camera confidently, hair flip",
+            "leaning on a wall, looking over sunglasses", "sitting on stairs, legs crossed, playful smile",
+            "candid laugh looking away", "over-the-shoulder look back, sultry gaze",
         ],
-        "hooks": ["Match day mood 🏏", "Who's watching today?", "Cricket > everything"],
-        "reactions": [
-            "Tumhara kya prediction hai? 👇", "Main toh full support mein hoon 💙 Tum?",
-            "Aaj ka man of the match kaun? Comment karo 🏏", "Dil thaam ke baitho guys 😮‍💨",
+        "hooks": ["Rate the fit 1-10", "Main character energy", "Outfit check ✓", "POV: you saw me first",
+                  "Fit or flop?", "This or that?"],
+        "captions": [
+            "Fit check kar lo, judge mat karo 😮‍💨 1-10?",
+            "Too cute to care, too hot to ignore 💅",
+            "Outfit on, ex blocked, vibe immaculate ✨",
+            "Main character energy only 🎬 Agree?",
+            "Kaun kaun isko steal karega? 👀",
         ],
-        "tags": ["#cricket", "#teamindia", "#cricketlovers", "#indiancricket", "#cricketfans", "#bleedblue",
-                 "#cricketnews", "#reelsindia"],
+        "tags": ["#ootd", "#fitcheck", "#genz", "#mumbaigirl", "#streetstyle", "#outfitinspo", "#y2kfashion",
+                 "#baddie", "#indianinfluencer", "#fashionreels"],
     },
-    "bollywood": {
-        "news_query": "Bollywood",
+    "night_out": {
         "outfits": [
-            "glamorous red evening gown", "black blazer dress", "retro polka dot dress",
-            "white shirt and oversized sunglasses", "champagne satin dress",
+            "black bodycon mini dress and strappy heels", "silver sequin mini dress with sleek ponytail",
+            "red satin cowl-neck mini dress", "black leather corset with high-waist leather pants",
+            "metallic halter top and black mini skirt", "little black dress with a thigh slit",
         ],
         "locations": [
-            "a movie theatre seat holding popcorn", "a red carpet with camera flashes",
-            "a vintage film set with a clapperboard and spotlights", "a home movie night with a projector",
-            "a film studio backdrop with director chairs",
+            "a rooftop bar overlooking the Mumbai skyline at night", "a neon-lit club with bokeh lights",
+            "the backseat of a car with city lights at night", "a luxury hotel balcony at night",
+            "a cocktail lounge with moody red lighting", "an elevator mirror before a party",
         ],
         "poses": [
-            "eating popcorn reacting with surprise", "filmy pose with arms open wide, smiling",
-            "holding a clapperboard, playful smile", "looking over her shoulder on the red carpet",
+            "holding a cocktail glass, sultry smile", "dancing with motion blur, laughing",
+            "biting lip slightly, playful eyes", "leaning on the bar counter, looking back at camera",
+            "flash photo, hand in hair, confident stare",
         ],
-        "hooks": ["Bollywood tea ☕", "Filmy update 🎬", "Did you hear this?"],
-        "reactions": [
-            "Tumhara kya reaction hai? 🍿", "Yeh dekhoge ya skip? Comment karo 🎬",
-            "Filmy log, opinions do 👇", "Main toh excited hoon 😍 Tum?",
+        "hooks": ["Weekend mode: ON", "Mumbai nights hit different", "POV: you're my plus one",
+                  "Ready? Let's go 🖤", "Saturday night energy"],
+        "captions": [
+            "Weekend plans? Mere saath chaloge? 🍸",
+            "Raat abhi baaki hai 🌙",
+            "Dressed to distract 😏",
+            "Mumbai nights, bad decisions, good pictures 🖤",
+            "Plus one dhoondh rahi hoon… apply karo 👀",
         ],
-        "tags": ["#bollywood", "#bollywoodnews", "#filmy", "#bollywoodupdates", "#moviebuff", "#cinema",
-                 "#reelsindia", "#entertainment"],
+        "tags": ["#nightout", "#mumbainights", "#partylook", "#weekendvibes", "#clubbing", "#baddie",
+                 "#nightlife", "#genz", "#reelsindia"],
     },
-    "rahasyamai": {
-        "news_query": None,
+    "fitness": {
         "outfits": [
-            "black leather jacket and jeans", "dark trench coat and boots", "black hoodie and cargo pants",
-            "olive jacket with a small backpack",
+            "black sports bra and high-waist leggings", "pastel matching gym set",
+            "oversized tee tied at the waist and biker shorts", "cream seamless gym set",
+            "olive green athleisure set",
         ],
         "locations": [
-            "ruins of an abandoned old fort at night in fog", "a deserted village of stone houses at dusk",
-            "a foggy forest under moonlight", "a dark old haveli corridor lit by a lantern",
-            "a candle-lit room with old maps and books",
+            "a modern gym with mirrors", "a pilates studio with natural light", "a beach at sunrise in Juhu",
+            "a rooftop running track", "a home workout corner with plants",
         ],
         "poses": [
-            "holding a flashlight, looking around cautiously", "looking back over her shoulder, suspicious",
-            "reading an old map by candlelight", "finger on lips, mysterious look",
+            "gym mirror selfie, confident smirk", "stretching on a mat, focused",
+            "lifting dumbbells, determined", "drinking from a water bottle, glowing and sweaty",
+            "doing a squat, side profile",
         ],
-        "hooks": [
-            "Bhangarh Fort: India's most haunted?", "Kuldhara: the village emptied overnight",
-            "Roopkund: the lake of skeletons", "Jatinga: where birds fall from the sky",
-            "Magnetic Hill: do cars roll uphill?", "Barog tunnel's unsolved story",
-            "Lonar Lake: a crater from space", "Shaniwarwada's midnight legend",
-            "Dumas Beach: why locals avoid it at night", "Kodinhi: India's village of twins",
+        "hooks": ["Leg day? Never heard of her", "Gym crush energy", "Pilates princess era",
+                  "Consistency > motivation", "Hot girl walk 🔥"],
+        "captions": [
+            "Leg day pe bhi slay 😮‍💨 Tumhara favourite workout?",
+            "Discipline wali vibe 💪 Kaun kaun gym gaya aaj?",
+            "Pilates princess era unlocked ✨",
+            "Gym mein flirt allowed hai kya? 😏",
         ],
-        "reactions": [
-            "Kya tum yahan raat ko jaoge? 👀", "Sach ya kahani? Comment karo 👇",
-            "Part 2 chahiye? 'Haan' likho 🕯️", "Is jagah ka koi aur rahasya pata hai? 👇",
-        ],
-        "tags": ["#rahasya", "#mystery", "#unsolvedmysteries", "#hauntedplaces", "#indianmysteries", "#horror",
-                 "#facts", "#reelsindia"],
+        "tags": ["#fitness", "#gymgirl", "#fitnessmotivation", "#pilates", "#gymtok", "#workout",
+                 "#fitgirl", "#gymlife", "#hotgirlwalk"],
     },
-    "news": {
-        "news_query": "",  # empty = India top stories
+    "pov_flirty": {
         "outfits": [
-            "navy blazer and white blouse", "beige blazer over a black top", "white shirt with rolled sleeves",
-            "grey blazer and black trousers",
+            "oversized white shirt and messy bun", "black spaghetti-strap top and jeans",
+            "lilac satin co-ord", "cropped hoodie and mini shorts", "red bodycon dress",
         ],
         "locations": [
-            "a modern TV news studio with screens behind", "a news desk with a microphone",
-            "a podcast studio with a mic and headphones", "a city street holding a newspaper",
+            "a candle-lit restaurant table", "her aesthetic bedroom with fairy lights",
+            "a car passenger seat at night with city lights", "a cozy cafe window seat",
+            "a hotel room with a city view",
         ],
         "poses": [
-            "sitting at a news desk talking to camera", "holding a microphone, serious expression",
-            "reading a newspaper, raising an eyebrow", "pointing at a screen behind her",
+            "looking at camera with a teasing smile", "biting lip slightly, playful eyes",
+            "finger on lips, whispering", "laughing and looking away shyly", "raising one eyebrow, smirking",
         ],
-        "hooks": ["Today's big news 📰", "Aaj ki khabar", "Quick news update"],
-        "reactions": [
-            "Is par tumhari kya raay hai? 👇", "Share karo jinko pata hona chahiye 📢",
-            "Aise updates daily chahiye? Follow karo ✨",
+        "hooks": ["POV: our first date", "When he says 'I'll call at 9'", "POV: you made me laugh",
+                  "Tell me you're down bad without telling me", "POV: you slid into my DMs"],
+        "captions": [
+            "Itna mat dekho, pyaar ho jayega 😏",
+            "First date pe kahan le chaloge? Best answer gets a reply 💌",
+            "Tum 9 baje call karne wale the… it's 11 😒",
+            "Main real hoon ya dream? Tum decide karo 😉",
+            "DMs open hai, attitude bhi 💅",
         ],
-        "tags": ["#news", "#indianews", "#breakingnews", "#todaynews", "#newsupdate", "#dailynews",
-                 "#reelsindia"],
+        "tags": ["#pov", "#reels", "#relatable", "#flirty", "#trending", "#reelsindia", "#explorepage",
+                 "#instareels", "#genz"],
+    },
+    "lifestyle": {
+        "outfits": [
+            "oversized hoodie and shorts, claw clip hair", "matching lounge set in beige",
+            "white tank top and baggy jeans", "cropped tee and track pants",
+        ],
+        "locations": [
+            "an aesthetic bedroom with fairy lights", "a matcha cafe with minimalist decor",
+            "a bookstore corner", "a balcony on a rainy evening with a coffee", "a skincare shelf mirror",
+        ],
+        "poses": [
+            "holding an iced coffee, candid smile", "applying lip gloss in the mirror",
+            "lying on the bed scrolling phone, laughing", "sipping matcha, looking out the window",
+        ],
+        "hooks": ["Get ready with me", "That girl routine", "Soft life only", "My Sunday reset",
+                  "Matcha > everything"],
+        "captions": [
+            "GRWM aur thoda gossip ☕ Kya plan hai aaj?",
+            "Soft life, hard boundaries 💅",
+            "Matcha, skincare aur zero drama ✨",
+            "No makeup, no filter, still cute 😌",
+        ],
+        "tags": ["#grwm", "#thatgirl", "#aesthetic", "#softlife", "#selfcare", "#matcha",
+                 "#dayinmylife", "#genz", "#mumbaigirl"],
     },
 }
 
 ALWAYS_TAGS = ["#AIgenerated", "#kiaramehra"]
 
-SIGN_OFFS = ["Milte hain, jaan 💋", "", "", "✨"]
+SIGN_OFFS = ["Milte hain, jaan 💋", "", "", "✨", "💋"]
 
-# Special days (MM-DD) - replaces the scene for the first item of the day.
+# Special days - modern party/event looks (date as MM-DD).
 FESTIVALS = {
-    "01-01": "a New Year's brunch with champagne and a sequin outfit",
-    "12-25": "a Christmas party with fairy lights",
-    "12-31": "a New Year's Eve party with confetti",
+    "01-01": "a New Year's brunch with champagne and sequin outfit",
+    "02-14": "a Valentine's date night in a red mini dress at a candle-lit rooftop",
+    "10-31": "a Halloween party in a sexy black cat costume",
+    "12-25": "a Christmas party with fairy lights in a red velvet mini dress",
+    "12-31": "a New Year's Eve party with confetti and a silver sequin dress",
 }
+
+# Festivals whose date moves every year (full dates) - modern party take, no traditional wear.
 MOVABLE_FESTIVALS = {
-    "2027-03-22": "a Holi party with colour powder on a white t-shirt",
-    "2027-10-29": "a Diwali night party with fairy lights and sparklers",
+    "2026-11-08": "a glamorous Diwali night party with fairy lights and sparklers, in a black satin dress",
+    "2027-03-22": "a Holi party with colour powder on a white crop top and denim shorts",
+    "2027-10-29": "a glamorous Diwali night party with fairy lights and sparklers, in a black satin dress",
 }
